@@ -9,10 +9,15 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configurarion and yaml files may be used to install only certain pieces of it, such as Filebeat.
 
 - [Ansible.cfg](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Ansible.cfg)
-
+- [Elkvm.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Elkvm.yml)
+- [Filebeat-configuration.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Filebeat-configuration.yml)
+- [Hosts](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Hosts)
+- [Metricbeat-configuration.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Metricbeat-configuration.yml)
+- [Metricbeat-playbook.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Metricbeat-playbook.yml)
+- [Pentest.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Pentest.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -24,12 +29,12 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly efficiete and accessible, in addition to restricting unauthorized access to the network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the activity logs and system changes.
+- Filebeat is a lightweight shipper for forwarding and centralizing log data. This means that Filebeat monitors the information in a file system and it logs the file and any changes made to the file if it notices any changes it will report on what was changed and when. It is a watch tool for monitoring the system.
+- Metricbeat collects data on a server and sends the results to an output that the admin.user specifies. The admin.user can then analyze that data and statistics gathered by Metricbeat to make critical plans to handle the maintance of the servers
+
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
