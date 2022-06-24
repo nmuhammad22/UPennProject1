@@ -78,7 +78,7 @@ The playbook implements the following tasks:
 ![Step 1](https://user-images.githubusercontent.com/97314199/175446652-a5d703b7-e208-4583-9bd0-44deb34ff800.png)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-![ElkDockerPS](https://user-images.githubusercontent.com/97314199/175447835-b43bd69a-952b-45e7-a5dc-58960fc83543.png)
+![ElkDockerPS](https://user-images.githubusercontent.com/97314199/175448398-a09ddd15-f3d8-4dfc-8b50-732e2d82a6f3.png)
 
 
 
