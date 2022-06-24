@@ -104,12 +104,15 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the  [Elkvm.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Elkvm.yml), [Filebeat-configuration.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Filebeat-configuration.yml), [Metricbeat-configuration.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Metricbeat-configuration.yml) file to the ansible container.
-- Copy the 
+- Copy the [Filebeat-playbook.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Filebeat-playbook.yml) and the [Metricbeat-playbook.yml](https://github.com/nmuhammad22/UPennProject1/blob/main/Project1/Ansible/Filebeat-playbook.yml) the Ansible container.
 - Update the /etc/ansible/host file to include the Elk Server IP 10.1.0.4
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected. The following link would be used: http://[your.vm.ip]:5601/app/kibana
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? 
+- _Which file is the playbook? Where do you copy it?_ ansible-playbook filebeat-playbook.yml ansible-playbook metricbeat-playbook.yml
+- _Which file do you update to make Ansible run the playbook on a specific machine?_ How do I specify which machine to install the ELK server on versus which to install Filebeat on? Navigate to /etc/ansible/host edit the file to add webserver/elkserver ip address.
+- _Which URL do you navigate to in order to check that the ELK server is running?_ http://[ELK-VM.Public IP]:5601/app/kibana
+
+
+
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
