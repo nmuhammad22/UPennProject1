@@ -37,42 +37,45 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name               | Function   | IP Address    | Operating System |
+|--------------------|------------|---------------|------------------|
+| JumpBoxProvisioner | Gateway    | 104.43.138.81 | Linux            |
+| Web-1              | Server     | 10.0.0.5      | Linux            |
+| Web-2              | Server     | 10.0.0.6      | Linux            |
+| Elk Server         | Elk Server | 20.65.93.224  | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the JumpBoxProvisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- <Personal IP Address>
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Admin User of the JumpBoxProvisioner.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name               | Publicly Accessible | IP Address    |
+|--------------------|---------------------|---------------|
+| JumpBoxProvisioner | Yes                 | 104.43.138.81 |
+| Web-1              | No                  | 10.0.0.5      |
+| Web-2              | No                  | 10.0.0.6      |
+| Elk Server         | Yes                 | 20.65.93.224  |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows the best use of time. This will allow for the creation of multiple machines without loosing the valuable resource of time to configure each of them.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Create New Virtual Net
+- Create Peering Rules
+- Create Ansible Playbook
+- Download Configuration to Container
+- Launch Container
+
+- Create New Virtual Network
+![Step 1](https://user-images.githubusercontent.com/97314199/175446652-a5d703b7-e208-4583-9bd0-44deb34ff800.png)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
