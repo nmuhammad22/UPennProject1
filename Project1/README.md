@@ -116,3 +116,19 @@ SSH into the control node and follow the steps below:
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+| COMMAND                                                 | DESCRIPTION                                                   |
+|---------------------------------------------------------|---------------------------------------------------------------|
+| ssh [username]@[JumpBoxProvisioner IP]                  | Connects to JumpBoxProvisioner                                |
+| ssh-keygen                                              | Generates Public/Private Key Pair                             |
+| cat ~./ssh_/id_rsa.pub                                  | Cats Public/Private Key Pair                                  |
+| sudo docker container list -a                           | Lists The Containers On The Machine                           |
+| sudo docker start [container name]                      | Starts The Named Container                                    |
+| sudo docker attach [container name]                     | Attaches The Named Container                                  |
+| Exit                                                    | Exits The Container (Exit A Second Time Exits Ansible)        |
+| cd /etc/ansible                                         | Changes Directory To /etc/ansible                             |
+| nano /etc/ansible/(hosts)                               | Opens Ansible (Hosts) File to Edit                            |
+| nano /etc/ansible/ansible.cfg                           | Opens Ansible Config File To Edit                             |
+| nano filebeat-config.yml nano filebeat-playbook.yml     | Opens Filebeat File To Edit Opens Filebeat Playbook To Edit   |
+| nano metricbeat-config.yml nano metricbeat-playbook.yml | Opens Metricbeat File To Edit Opens Filebeat Playbook To Edit |
+| ansible-playbook [filename.yml]                         | Executes The Playbook                                         |
